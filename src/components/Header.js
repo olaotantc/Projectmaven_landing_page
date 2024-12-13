@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Header() {
     return (
-        <header className="p-6 container mx-auto flex items-center justify-between">
+        <header className="p-4  container mx-auto flex items-center justify-between">
             {/* Logo Image */}
             <div className="w-[146px] h-[39px]    relative">
                 <Image src={"/pricemaven-logo-ai-product-development.avif"} fill="true" className="object-contain" alt="Pricemaven logo - AI-powered product development tools for accurate project estimation, scoping, and documentation" />

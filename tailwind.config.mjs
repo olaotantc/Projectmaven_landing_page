@@ -10,9 +10,15 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "var(--primary)",
+        "primary-light": "var(--primary-light)",
+        "primary-dark": "var(--primary-dark)",
       },
       fontFamily: {
-        manrope: ['var(--font-manrope)', 'sans-serif'], 
+        manrope: ["var(--font-roboto)", "sans-serif"],
+      },
+      spacing: {
+        hero: "calc(100vh - 71px)",
       },
     },
   },

@@ -1,11 +1,12 @@
-import { Manrope } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 
-const manrope = Manrope({
+const roboto = Roboto({
   subsets: ['latin'],
-  variable: '--font-manrope',
-  weight: ['400', '500', '600', '700'],
+  variable: '--font-roboto',
+  weight: ['400', '500', '700', '900'],
 });
 
 export const metadata = {
@@ -35,11 +36,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${manrope.variable} antialiased font-manrope bg-white`}
+        className={`${roboto.variable} antialiased font-roboto bg-white`}
       >
         <Header />
         {children}
-        
       </body>
     </html>
   );
