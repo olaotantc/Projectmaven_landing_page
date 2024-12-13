@@ -1,25 +1,15 @@
-import Input from "./Input";
-import TextPrimary from "./TextPrimary";
+import HeroLeft from "./HeroLeft";
+import HeroRight from "./HeroRight";
 
 export default function Hero() {
   return (
     <div className="bg-background w-full h-hero  ">
-      <div className="container mx-auto">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 w-full h-full place-content-center">
         {/* Left Hero Content */}
-        <div>
-          <h1>
-            Accelerate Your Product Development.{" "}
-            <TextPrimary> Build Faster.</TextPrimary>
-          </h1>
-          <p>
-            Scope and estimate your projects accurately, streamline your
-            workflow, and speed up your product development - all in one place.
-            <TextPrimary> Powered by AI</TextPrimary>
-          </p>
-          <Input />
-        </div>
+        <HeroLeft />
 
         {/* Right Hero Content */}
+        <HeroRight />
       </div>
     </div>
   );

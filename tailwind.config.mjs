@@ -13,6 +13,7 @@ export default {
         primary: "var(--primary)",
         "primary-light": "var(--primary-light)",
         "primary-dark": "var(--primary-dark)",
+        "content-secondary": "#545353",
       },
       fontFamily: {
         manrope: ["var(--font-roboto)", "sans-serif"],
