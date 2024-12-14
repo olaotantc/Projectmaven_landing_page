@@ -1,18 +1,17 @@
 import AvatarRow from "./AvatarRow";
 import Input from "./Input";
 import TextAccent from "./TextAccent";
+import TextHeading from "./TextHeading";
 
 export default function HeroLeft() {
   return (
-    <div className="flex items-center justify-center flex-col md:block">
-      <h1
-        className="font-bold text-[45px] md:text-5xl text-center md:text-left  "
-        style={{ lineHeight: "1.2" ,letterSpacing:'-1px' }}
-      >
-        Accelerate Your Product Development.{" "}
-      <br className="md:hidden" />
-        <TextAccent> Build Faster.</TextAccent>
-      </h1>
+    <div className="flex items-center  justify-center flex-col md:block">
+      <TextHeading
+  
+        text={"Accelerate Your Product Development."}
+        accentText={"Build Faster."}
+        addStyles={"text-[45px] font-bold text-center md:text-left "}
+      />
       <br />
       <p className="text-content-secondary   md:text-base lg:text-lg">
         Scope and estimate your projects accurately, streamline your workflow,
