@@ -16,7 +16,8 @@ export default {
         "content-secondary": "#545353",
       },
       fontFamily: {
-        manrope: ["var(--font-roboto)", "sans-serif"],
+        roboto: ["var(--font-roboto)", "sans-serif"],
+        inter: ["var(--font-inter)", "sans-serif"],
       },
       spacing: {
         hero: "calc(100vh - 71px)",

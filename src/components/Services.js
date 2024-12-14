@@ -1,3 +1,4 @@
+import servicesData from "@/data/serviceData";
 import ServiceCard from "./ServiceCard";
 import TextHeading from "./TextHeading";
 
@@ -12,11 +13,15 @@ export default function Services() {
         addStyles={"text-[35px] font-bold  text-center "}
       />
 
-      <div className="grid grid-cols-1 mt-20 md:grid-cols-2 lg:grid-cols-4">
-        <ServiceCard />
-        <ServiceCard />
-        <ServiceCard />
-        <ServiceCard />
+      <div className="grid grid-cols-1 px-10 md:px-0  mt-16 md:mt-24  gap-7 md:grid-cols-2 lg:grid-cols-4">
+        {servicesData.map((service) => (
+          <ServiceCard
+            id={service.id}
+            key={service.id}
+            title={service.title}
+            description={service.description}
+          />
+        ))}
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ export default function HeroLeft() {
   
         text={"Accelerate Your Product Development."}
         accentText={"Build Faster."}
-        addStyles={"text-[45px] font-bold text-center md:text-left "}
+        addStyles={"text-[45px] font-extrabold text-center md:text-left "}
       />
       <br />
       <p className="text-content-secondary   md:text-base lg:text-lg">
