@@ -1,6 +1,6 @@
 export default function Input() {
   return (
-    <div className="relative w-full max-w-[520px] text-sm md:text-[17px] ">
+    <div className="relative w-full max-w-[520px]  md:text-[17px] ">
       <input
         type="text"
         className="placeholder:text-center md:placeholder:text-left pl-6 pr-16 py-4 rounded-full  border border-gray-300 focus:outline-none focus:ring-1 focus:ring-primary-light focus:ring-opacity-10 w-full"
