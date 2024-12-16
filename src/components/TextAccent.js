@@ -1,6 +1,6 @@
-
-export default function TextAccent({children}) {
+export default function TextAccent({ children }) {
   return (
-    <span className='text-primary'>{children}</span>
-  )
+    // Renders text with primary color styling
+    <span className="text-primary">{children}</span>
+  );
 }

@@ -14,6 +14,7 @@ export default {
         "primary-light": "var(--primary-light)",
         "primary-dark": "var(--primary-dark)",
         "content-secondary": "#545353",
+        footer: "#f8fcff",
       },
       fontFamily: {
         roboto: ["var(--font-roboto)", "sans-serif"],
@@ -21,6 +22,11 @@ export default {
       },
       spacing: {
         hero: "calc(100vh - 71px)",
+      },
+    },
+    variants: {
+      extend: {
+        fill: ["hover", "focus"], // Enable hover variant for fill
       },
     },
   },

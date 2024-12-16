@@ -1,6 +1,6 @@
 const servicesData = [
     {
-      id: 2,
+      id: 1,
       title: "AI Powered Product Ideation",
       description:
         "Transform your project ideas into well-defined blueprints. Get expert guidance on optimal features, integration tech stacks, and project structure, even without a technical background.",

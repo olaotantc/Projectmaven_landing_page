@@ -6,9 +6,10 @@
   --background: #f9f7ff;
   --foreground: #171717;
   --primary: #7547f8;
-  --primary-light:#9a7af3;
-  --primary-dark:#622df4;
+  --primary-light: #9a7af3;
+  --primary-dark: #622df4;
 }
 
-
-
+.social-icons:hover {
+  fill: var(--primary);
+}

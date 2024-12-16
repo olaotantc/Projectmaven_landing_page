@@ -1,25 +1,28 @@
-import servicesData from "@/data/serviceData";
-import ServiceCard from "./ServiceCard";
-import TextHeading from "./TextHeading";
+import servicesData from "@/data/serviceData"; // Importing service data
+import ServiceCard from "./ServiceCard"; // Importing the ServiceCard component
+import TextHeading from "./TextHeading"; // Importing the heading component
 
 export default function Services() {
   return (
-    <div className="w-full min-h-screen container mx-auto text-center py-28 ">
+    <div className="w-full mt-5  container mx-auto text-center py-28">
+      {/* Section title with accent text */}
       <TextHeading
         size="35px"
         text="Product Development"
         accentText={"Simplified"}
         isBr={true}
-        addStyles={"text-[35px] font-bold  text-center "}
+        addStyles={"text-[35px] font-bold text-center"}
       />
 
-      <div className="grid grid-cols-1 px-10 md:px-0  mt-16 md:mt-24  gap-7 md:grid-cols-2 lg:grid-cols-4">
+      {/* Service cards grid */}
+      <div className="grid grid-cols-1 px-10 md:px-0 mt-16 md:mt-24 gap-7 md:grid-cols-2 lg:grid-cols-4">
+        {/* Rendering each service card */}
         {servicesData.map((service) => (
           <ServiceCard
-            id={service.id}
-            key={service.id}
-            title={service.title}
-            description={service.description}
+            id={service.id} // Unique ID for each service
+            key={service.id} // Key for React list rendering
+            title={service.title} // Service title
+            description={service.description} // Service description
           />
         ))}
       </div>
