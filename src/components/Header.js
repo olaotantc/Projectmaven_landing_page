@@ -5,12 +5,12 @@ export default function Header() {
     return (
         <header className="p-4 container mx-auto flex items-center justify-between">
             {/* Logo Image */}
-            <div className="w-[146px] h-[39px] relative">
+            <div className="w-[150px] h-[40px] relative">
                 <Image 
-                    src={"/pricemaven-logo-ai-product-development.avif"} // Logo image source
+                    src={"/projectmaven-logo-ai-product-development.svg"} // Logo image source
                     fill="true" // Ensures the image fills the container
                     className="object-contain" // Keeps the image aspect ratio intact
-                    alt="Pricemaven logo - AI-powered product development tools for accurate project estimation, scoping, and documentation" // Alt text for accessibility
+                    alt="Projectmaven logo - AI-powered product development tools for accurate project estimation, scoping, and documentation" // Alt text for accessibility
                 />
             </div>
 

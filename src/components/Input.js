@@ -6,7 +6,7 @@ export default function Input({ btnText, subText, small }) {
         {/* Input Field: The input field for the user's email, with conditional padding */}
         <input
           type="text"
-          className={`placeholder:text-center md:placeholder:text-left pl-6 pr-16 ${
+          className={`placeholder:text-center text-center  md:placeholder:text-left pl-6 pr-6 md:pr-16  ${
             small ? "py-3" : "py-4" // Conditional padding based on 'small' prop
           } rounded-full border border-gray-300   md:text-sm lg:text-base focus:outline-none focus:ring-1 focus:ring-primary-light focus:ring-opacity-10 w-full`}
           placeholder="Enter your email address"
@@ -19,7 +19,7 @@ export default function Input({ btnText, subText, small }) {
       </div>
 
       {/* Subtext: A description or disclaimer displayed below the input */}
-      <p className="text-content-secondary text-xs my-2">{subText}</p>
+      <p className="text-content-secondary text-xs my-2 text-center md:text-left">{subText}</p>
     </div>
   );
 }

@@ -1,18 +1,21 @@
 import servicesData from "@/data/serviceData"; // Importing service data
 import ServiceCard from "./ServiceCard"; // Importing the ServiceCard component
 import TextHeading from "./TextHeading"; // Importing the heading component
+import { FadeUp } from "./FadeZoom";
 
 export default function Services() {
   return (
     <div className="w-full mt-5  container mx-auto text-center py-28">
       {/* Section title with accent text */}
-      <TextHeading
-        size="35px"
-        text="Product Development"
-        accentText={"Simplified"}
-        isBr={true}
-        addStyles={"text-[35px] font-bold text-center"}
-      />
+      <FadeUp delay={.3}>
+        <TextHeading
+          size="35px"
+          text="Product Development"
+          accentText={"Simplified"}
+          isBr={true}
+          addStyles={"text-[35px] font-bold text-center"}
+        />
+      </FadeUp>
 
       {/* Service cards grid */}
       <div className="grid grid-cols-1 px-10 md:px-0 mt-16 md:mt-24 gap-7 md:grid-cols-2 lg:grid-cols-4">

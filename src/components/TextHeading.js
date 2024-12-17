@@ -3,9 +3,6 @@ import TextAccent from "./TextAccent"; // Importing TextAccent component for sty
 export default function TextHeading({ text, accentText, isBr, addStyles }) {
   return (
     <h1
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      data-aos-delay="200"
       // Main heading element with dynamic styling and custom line spacing
       className={` md:text-5xl  ${addStyles}`}
       style={{ lineHeight: "1.2", letterSpacing: "0px" }}

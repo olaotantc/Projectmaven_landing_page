@@ -1,17 +1,17 @@
 import Image from "next/image";
+import { ZoomIn } from "./FadeZoom";
 
 export default function ServiceCard({ id, title, description }) {
   return (
-    <div
+    <ZoomIn delay={.1+parseFloat(`.${id*2}`)}>
+      <div
       className="flex flex-col items-center justify-start gap-5 text-center h-full"
-      data-aos="zoom-in"
-      data-aos-duration="600"
-      data-aos-delay={`${id}00`}
+      
     >
       {/* Icon: Displaying the service icon based on the service ID */}
       <div className="w-16 h-16 flex items-center justify-center">
         <Image
-          src={`/pricemaven-service-${id}.svg`} // Dynamic image source based on the service ID
+          src={`/projectmaven-service-${id}.svg`} // Dynamic image source based on the service ID
           alt={title} // Alt text for accessibility
           width={40} // Setting the width of the icon
           height={40} // Setting the height of the icon
@@ -30,5 +30,6 @@ export default function ServiceCard({ id, title, description }) {
       {/* Description: Displaying the description of the service */}
       <p className="text-base flex-1">{description}</p>
     </div>
+    </ZoomIn>
   );
 }

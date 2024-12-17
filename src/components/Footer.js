@@ -14,10 +14,10 @@ export default function Footer() {
         {/* Logo section */}
         <div className="w-[129px] h-[39px] relative">
           <Image
-            src={"/pricemaven-logo-ai-product-development.avif"} // Image source for the logo
+            src={"/projectmaven-logo-ai-product-development.svg"} // Image source for the logo
             fill="true" // Ensures the image fills the container
             className="object-contain" // Keeps the image aspect ratio intact
-            alt="Pricemaven logo - AI-powered product development tools for accurate project estimation, scoping, and documentation" // Alt text for accessibility
+            alt="Projectmaven logo - AI-powered product development tools for accurate project estimation, scoping, and documentation" // Alt text for accessibility
           />
         </div>
         {/* Subscription message */}
@@ -52,7 +52,7 @@ export default function Footer() {
         {/* Footer copyright */}
         <p className="mt-12">
           © Copyright 2024, All Rights Reserved by &nbsp;
-          <TextAccent>Pricemaven</TextAccent>
+          <TextAccent>Projectmaven</TextAccent>
           {/* TextAccent component used for styling the brand name */}
         </p>
       </div>

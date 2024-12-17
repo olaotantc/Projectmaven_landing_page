@@ -1,36 +1,34 @@
 import Image from "next/image";
 import AvatarRow from "./AvatarRow"; // Importing the AvatarRow component to show avatars of subscribed users
 import Input from "./Input"; // Importing a custom Input component for subscription
-import TextAccent from "./TextAccent"; // Custom component for styling accent text
 import TextHeading from "./TextHeading"; // Custom heading component for consistent text styling
+import { FadeUp } from "./FadeZoom";
+import AnimatedText from "./AnimatedText";
 
 export default function HeroLeft() {
   return (
     <div className="flex items-center justify-center flex-col md:items-start">
       {/* Centering content on mobile and displaying as block on desktop */}
       {/* Heading Section */}
-      <TextHeading
-        text={"Accelerate Your Product Development."} // Main heading text
-        accentText={"Build Faster."} // Accent text for emphasis
-        addStyles={
-          "text-[42px] md:text-[35px] lg:text-[48px] font-extrabold text-center md:text-left "
-        } // Custom styles for font size, weight, and alignment
+      <FadeUp delay={0.3}>
+        <TextHeading
+          text={"Accelerate Your Product Development."} // Main heading text
+          accentText={"Build Faster."} // Accent text for emphasis
+          addStyles={
+            "text-[42px] md:text-[35px] lg:text-[48px] font-extrabold text-center md:text-left "
+          } // Custom styles for font size, weight, and alignment
+        />
+      </FadeUp>
+      <br />
+
+      <AnimatedText
+        text="Scope and estimate your projects accurately, streamline your workflow, and speed up your product development - all in one place."
+        className="text-content-secondary md:text-base lg:text-lg"
+        TextAccent="Powered by AI"
       />
       <br />
-      {/* Description Paragraph */}
-      <p   data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-delay="300" className="text-content-secondary md:text-base lg:text-lg">
-        Scope and estimate your projects accurately, streamline your workflow,
-        and speed up your product development - all in one place.
-        <TextAccent> Powered by AI</TextAccent>
-        {/* Accent text for highlighting AI */}
-      </p>
-      <br />
-      <div
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-delay="600"
+      <FadeUp
+        delay={0.6}
         className="w-full relative flex items-center justify-center md:justify-start"
       >
         {/* Subscription Input */}
@@ -45,23 +43,22 @@ export default function HeroLeft() {
           width={75}
           height={75}
           className="absolute hidden md:block -right-16 xl:right-10 -top-2"
-          alt="pricemaven hero arrow icon"
+          alt="projectmaven hero arrow icon"
           priority
         />
-      </div>
+      </FadeUp>
       <br />
       {/* Avatar and Subscription Count */}
-      <div
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-delay="800"
-        className="flex flex-col items-center justify-center md:flex-row md:justify-start"
+
+      <FadeUp
+        delay={0.9}
+        className="w-full relative flex items-center justify-center md:justify-start"
       >
         <AvatarRow /> {/* Displays avatars of users who subscribed */}
         <p className="text-sm md:text-base ">
           <strong>100+</strong> Already Subscribed {/* Subscription count */}
         </p>
-      </div>
+      </FadeUp>
     </div>
   );
 }
