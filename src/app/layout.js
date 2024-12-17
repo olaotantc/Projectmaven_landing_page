@@ -18,31 +18,38 @@ const inter = Inter({
 });
 
 // Metadata for the page to enhance SEO and social sharing
+
+const siteUrl = "https://projectmaven.vercel.app";
+
 export const metadata = {
-  title: 'Projectmaven | Accelerate Your Product Development',
-  description: 'Scope and estimate your projects accurately, streamline your workflow, and speed up your product development with AI-powered tools. Build faster with expert guidance.',
+  title: "Projectmaven | Accelerate Your Product Development",
+  description:
+    "Scope and estimate your projects accurately, streamline your workflow, and speed up your product development with AI-powered tools. Build faster with expert guidance.",
+  metadataBase: new URL("https://projectmaven.vercel.app"),
   openGraph: {
-    title: 'Projectmaven | Accelerate Your Product Development',
-    description: 'Scope and estimate your projects accurately, streamline your workflow, and speed up your product development with AI-powered tools. Build faster with expert guidance.',
-    url: 'https://projectmaven.vercel.app/',
-    siteName: 'Projectmaven',
+    title: "Projectmaven | Accelerate Your Product Development",
+    description:
+      "Scope and estimate your projects accurately, streamline your workflow, and speed up your product development with AI-powered tools. Build faster with expert guidance.",
+    url: siteUrl,
+    siteName: "Projectmaven",
     images: [
       {
-        url: '/projectmaven.png',
+        url: `${siteUrl}/projectmaven.png`,
         width: 1200,
         height: 630,
-        alt: 'Projectmaven',
+        alt: "Projectmaven",
       },
     ],
-    type: 'website',
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Projectmaven | Accelerate Your Product Development',
-    description: 'Scope and estimate your projects accurately, streamline your workflow, and speed up your product development with AI-powered tools. Build faster with expert guidance.',
-    images: ['/projectmaven.png'],
+    card: "summary_large_image",
+    title: "Projectmaven | Accelerate Your Product Development",
+    description:
+      "Scope and estimate your projects accurately, streamline your workflow, and speed up your product development with AI-powered tools. Build faster with expert guidance.",
+    images: [`${siteUrl}/projectmaven.png`],
   },
-}
+};
 
 // RootLayout component to wrap the entire page
 export default function RootLayout({ children }) {
