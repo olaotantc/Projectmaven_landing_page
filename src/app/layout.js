@@ -32,7 +32,7 @@ export const metadata = {
       "Streamline your product development with AI-powered tools for project estimation, scoping, and documentation.", // OpenGraph description
     url: "https://www.projectmaven.com", // Website URL for OpenGraph
     type: "website", // Type of content being shared
-    image: "/path/to/your-image.jpg", // OpenGraph image (replace with actual image path)
+    image: "/projectmaven.png", // OpenGraph image
   },
   twitter: {
     // Twitter Card metadata for sharing on Twitter
@@ -41,7 +41,7 @@ export const metadata = {
     title: "Projectmaven | Accelerate Your Product Development", // Twitter card title
     description:
       "AI-powered product development tools to streamline project estimation, scoping, and documentation.", // Twitter card description
-    image: "/path/to/your-image.jpg", // Image to display on Twitter (replace with actual image path)
+    image: "/projectmaven.png", // Image to display on Twitter
   },
   favicon: "/favicon.ico", // Favicon for the website
   canonical: "https://www.projectmaven.com", // Canonical URL to avoid duplicate content issues
