@@ -19,33 +19,30 @@ const inter = Inter({
 
 // Metadata for the page to enhance SEO and social sharing
 export const metadata = {
-  title: "Projectmaven | Accelerate Your Product Development", // Title of the webpage
-  description:
-    "Scope and estimate your projects accurately, streamline your workflow, and speed up your product development with AI-powered tools. Build faster with expert guidance.", // Description for SEO
-  keywords:
-    "AI-powered product development, project estimation, product ideation, cost estimation, project scoping, product documentation, project management tools", // Keywords for search engines
-  author: "Projectmaven", // Author of the page
+  title: 'Projectmaven | Accelerate Your Product Development',
+  description: 'Scope and estimate your projects accurately, streamline your workflow, and speed up your product development with AI-powered tools. Build faster with expert guidance.',
   openGraph: {
-    // OpenGraph metadata for social media sharing (Facebook, LinkedIn, etc.)
-    title: "Projectmaven | Accelerate Your Product Development", // OpenGraph title
-    description:
-      "Streamline your product development with AI-powered tools for project estimation, scoping, and documentation.", // OpenGraph description
-    url: "https://www.projectmaven.com", // Website URL for OpenGraph
-    type: "website", // Type of content being shared
-    image: "/projectmaven.png", // OpenGraph image
+    title: 'Projectmaven | Accelerate Your Product Development',
+    description: 'Scope and estimate your projects accurately, streamline your workflow, and speed up your product development with AI-powered tools. Build faster with expert guidance.',
+    url: 'https://projectmaven.vercel.app/',
+    siteName: 'Projectmaven',
+    images: [
+      {
+        url: '/projectmaven.png',
+        width: 1200,
+        height: 630,
+        alt: 'Projectmaven',
+      },
+    ],
+    type: 'website',
   },
   twitter: {
-    // Twitter Card metadata for sharing on Twitter
-    card: "summary_large_image", // Type of Twitter Card (summary with a large image)
-    creator: "@yourhandle", // Twitter handle of the creator
-    title: "Projectmaven | Accelerate Your Product Development", // Twitter card title
-    description:
-      "AI-powered product development tools to streamline project estimation, scoping, and documentation.", // Twitter card description
-    image: "/projectmaven.png", // Image to display on Twitter
+    card: 'summary_large_image',
+    title: 'Projectmaven | Accelerate Your Product Development',
+    description: 'Scope and estimate your projects accurately, streamline your workflow, and speed up your product development with AI-powered tools. Build faster with expert guidance.',
+    images: ['/projectmaven.png'],
   },
-  favicon: "/favicon.ico", // Favicon for the website
-  canonical: "https://www.projectmaven.com", // Canonical URL to avoid duplicate content issues
-};
+}
 
 // RootLayout component to wrap the entire page
 export default function RootLayout({ children }) {
