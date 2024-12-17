@@ -18,14 +18,21 @@ export default function HeroLeft() {
       />
       <br />
       {/* Description Paragraph */}
-      <p className="text-content-secondary md:text-base lg:text-lg">
+      <p   data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="300" className="text-content-secondary md:text-base lg:text-lg">
         Scope and estimate your projects accurately, streamline your workflow,
         and speed up your product development - all in one place.
-        <TextAccent> Powered by AI</TextAccent>{" "}
+        <TextAccent> Powered by AI</TextAccent>
         {/* Accent text for highlighting AI */}
       </p>
       <br />
-      <div className="w-full relative flex items-center justify-center md:justify-start">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="600"
+        className="w-full relative flex items-center justify-center md:justify-start"
+      >
         {/* Subscription Input */}
         <Input
           btnText={"Join the Waitlist"} // Button text for subscription
@@ -37,14 +44,19 @@ export default function HeroLeft() {
           src="/arrow.svg"
           width={75}
           height={75}
-           className="absolute hidden md:block -right-16 xl:right-10 -top-2"
+          className="absolute hidden md:block -right-16 xl:right-10 -top-2"
           alt="pricemaven hero arrow icon"
           priority
         />
       </div>
       <br />
       {/* Avatar and Subscription Count */}
-      <div className="flex flex-col items-center justify-center md:flex-row md:justify-start">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="800"
+        className="flex flex-col items-center justify-center md:flex-row md:justify-start"
+      >
         <AvatarRow /> {/* Displays avatars of users who subscribed */}
         <p className="text-sm md:text-base ">
           <strong>100+</strong> Already Subscribed {/* Subscription count */}

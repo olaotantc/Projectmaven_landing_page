@@ -25,7 +25,8 @@ export const metadata = {
   keywords:
     "AI-powered product development, project estimation, product ideation, cost estimation, project scoping, product documentation, project management tools", // Keywords for search engines
   author: "Pricemaven", // Author of the page
-  openGraph: { // OpenGraph metadata for social media sharing (Facebook, LinkedIn, etc.)
+  openGraph: {
+    // OpenGraph metadata for social media sharing (Facebook, LinkedIn, etc.)
     title: "Pricemaven | Accelerate Your Product Development", // OpenGraph title
     description:
       "Streamline your product development with AI-powered tools for project estimation, scoping, and documentation.", // OpenGraph description
@@ -33,7 +34,8 @@ export const metadata = {
     type: "website", // Type of content being shared
     image: "/path/to/your-image.jpg", // OpenGraph image (replace with actual image path)
   },
-  twitter: { // Twitter Card metadata for sharing on Twitter
+  twitter: {
+    // Twitter Card metadata for sharing on Twitter
     card: "summary_large_image", // Type of Twitter Card (summary with a large image)
     creator: "@yourhandle", // Twitter handle of the creator
     title: "Pricemaven | Accelerate Your Product Development", // Twitter card title
@@ -48,8 +50,12 @@ export const metadata = {
 // RootLayout component to wrap the entire page
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="h-screen"> {/* Set language to English and make the html full height */}
-      <body className={`${roboto.variable} ${inter.variable}  antialiased font-roboto bg-white`}> {/* Apply fonts and styles globally */}
+    <html lang="en" className="h-screen">
+      {/* Set language to English and make the html full height */}
+      <body
+        className={`${roboto.variable} ${inter.variable}  antialiased font-roboto bg-white`}
+      >
+        {/* Apply fonts and styles globally */}
         <Header /> {/* Header component at the top of the page */}
         {children} {/* The main content passed as children to the layout */}
         <Footer /> {/* Footer component at the bottom of the page */}

@@ -2,7 +2,12 @@ import Image from "next/image";
 
 export default function ServiceCard({ id, title, description }) {
   return (
-    <div className="flex flex-col items-center justify-start gap-5 text-center h-full">
+    <div
+      className="flex flex-col items-center justify-start gap-5 text-center h-full"
+      data-aos="zoom-in"
+      data-aos-duration="600"
+      data-aos-delay={`${id}00`}
+    >
       {/* Icon: Displaying the service icon based on the service ID */}
       <div className="w-16 h-16 flex items-center justify-center">
         <Image
