@@ -1,27 +1,12 @@
 "use client";
+import { useModalContext } from "@/context/ModalContext";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { useEffect } from "react";
 
-const CheckCircleIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    strokeWidth={1.5}
-    stroke="currentColor"
-    className="w-20 h-20 text-green-600" // Larger size for the icon
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-    />
-  </svg>
-);
-
-export default function EmailModal({ open, onClose }) {
+export default function EmailModal() {
+  const { showModal, onClose } = useModalContext();
   useEffect(() => {
-    if (open) {
+    if (showModal) {
       document.body.style.overflow = "hidden";
       const handleEscape = (e) => {
         if (e.key === "Escape") onClose();
@@ -32,9 +17,9 @@ export default function EmailModal({ open, onClose }) {
         document.removeEventListener("keydown", handleEscape);
       };
     }
-  }, [open, onClose]);
+  }, [showModal, onClose]);
 
-  if (!open) return null;
+  if (!showModal) return null;
 
   return (
     <>
@@ -53,7 +38,7 @@ export default function EmailModal({ open, onClose }) {
               <div className="flex flex-col items-center sm:flex-row sm:items-start">
                 {/* Icon Container */}
                 <div className="flex-shrink-0 mb-4 sm:mb-0">
-                <DotLottieReact
+                  <DotLottieReact
                     src="https://lottie.host/bf070228-12c4-4bca-bf10-8d872bf6fb61/XPgLXTY2Fh.lottie"
                     background="transparent"
                     autoplay

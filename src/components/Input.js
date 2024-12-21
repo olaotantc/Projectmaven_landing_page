@@ -15,15 +15,16 @@ export default function Input({ btnText, subText, small }) {
   const [isLoading, setIsLoading] = useState(false);
   const { handleSubmit, reset } = useForm();
 
-  const onSubmit = async (data) => {
+  const onSubmit = async () => {
     try {
       setIsLoading(true);
 
       // Simulating the submission delay
       await new Promise((resolve) => setTimeout(resolve, 2000));
+      console.log(modalContext);
 
       setIsLoading(false);
-      triggerConfetti(); // Trigger confetti animation
+      triggerConfetti(true); // Trigger confetti animation
       setShowModal(true);
       reset();
     } catch (error) {

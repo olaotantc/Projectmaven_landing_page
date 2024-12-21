@@ -29,6 +29,7 @@ export const ModalProvider = ({ children }) => {
   return (
     <ModalContext.Provider
       value={{
+        
         showModal,
         setShowModal,
         triggerConfetti,

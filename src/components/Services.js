@@ -13,7 +13,7 @@ export default function Services() {
           text="Product Development"
           accentText={"Simplified"}
           isBr={true}
-          addStyles={"text-[35px] font-bold text-center"}
+          addStyles={"text-[35px] font-bold text-center px-5"}
         />
       </FadeUp>
 
