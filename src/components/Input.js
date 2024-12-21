@@ -1,25 +1,99 @@
+"use client";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { useModalContext } from "@/context/ModalContext";
+
 export default function Input({ btnText, subText, small }) {
+  const modalContext = useModalContext();
+
+  if (!modalContext) {
+    console.log("Modal context is not available.");
+    return null; // Or display an error message
+  }
+
+  const { setShowModal, triggerConfetti } = modalContext;
+  const [isLoading, setIsLoading] = useState(false);
+  const { handleSubmit, reset } = useForm();
+
+  const onSubmit = async (data) => {
+    try {
+      setIsLoading(true);
+
+      // Simulating the submission delay
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+
+      setIsLoading(false);
+      triggerConfetti(); // Trigger confetti animation
+      setShowModal(true);
+      reset();
+    } catch (error) {
+      setIsLoading(false);
+      console.error("Subscription error:", error);
+    }
+  };
+
   return (
     <div className={!small ? "w-full" : ""}>
-      {/* Input Container: This div holds the input field and button */}
-      <div className="relative w-full md:max-w-[520px] md:text-[17px]">
-        {/* Input Field: The input field for the user's email, with conditional padding */}
-        <input
-          type="text"
-          className={`placeholder:text-center text-center  md:placeholder:text-left pl-6 pr-6 md:pr-16  ${
-            small ? "py-3" : "py-4" // Conditional padding based on 'small' prop
-          } rounded-full border border-gray-300   md:text-sm lg:text-base focus:outline-none focus:ring-1 focus:ring-primary-light focus:ring-opacity-10 w-full`}
-          placeholder="Enter your email address"
-        />
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="relative w-full md:max-w-[520px] md:text-[17px] ">
+          <input
+            type="email"
+            className={`placeholder:text-left text-center md:text-left md:placeholder:text-left pl-6 pr-6 md:pr-16 ${
+              small ? "py-3" : "py-4"
+            } rounded-full border border-gray-300  md:text-sm lg:text-base focus:outline-none focus:ring-1 focus:ring-primary-light 
+            focus:ring-opacity-10 w-full`}
+            placeholder="Enter your email address"
+            disabled={isLoading}
+            required
+          />
 
-        {/* Submit Button: The button for submitting the form, positioned next to the input field */}
-        <button className="relative w-full md:text-sm lg:text-base md:w-auto mt-3 md:mt-1 md:absolute inset-y-0 right-1 px-7 py-3 md:py-2 my-1 grid place-content-center rounded-full bg-primary text-white hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary-light">
-          {btnText} {/* Display the button text passed as a prop */}
-        </button>
-      </div>
+          <button
+            type="submit"
+            disabled={isLoading}
+            className={`relative w-full md:text-sm lg:text-base md:w-auto mt-3 md:mt-1 
+            md:absolute inset-y-0 right-1 px-7 py-3 md:py-2 my-1 grid place-content-center 
+            rounded-full bg-primary text-white hover:bg-primary-dark focus:outline-none 
+            focus:ring-2 focus:ring-primary-light transition-all 
+            ${isLoading ? "opacity-75 cursor-not-allowed" : ""}`}
+          >
+            {isLoading ? (
+              <div className="flex items-center gap-2">
+                <svg
+                  className="animate-spin h-4 w-4 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  />
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  />
+                </svg>
+                <span>Subscribing...</span>
+              </div>
+            ) : (
+              btnText
+            )}
+          </button>
+        </div>
+      </form>
 
-      {/* Subtext: A description or disclaimer displayed below the input */}
-      <p className="text-content-secondary text-xs my-2 text-center md:text-left">{subText}</p>
+      <p
+        className={`text-content-secondary text-xs my-2 text-center md:text-${
+          small ? "center" : "left"
+        }`}
+      >
+        {subText}
+      </p>
     </div>
   );
 }

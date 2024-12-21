@@ -22,32 +22,40 @@ const inter = Inter({
 const siteUrl = "https://projectmaven.vercel.app";
 
 export const metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Projectmaven | Accelerate Your Product Development",
   description:
-    "Scope and estimate your projects accurately, streamline your workflow, and speed up your product development with AI-powered tools. Build faster with expert guidance.",
-  metadataBase: new URL("https://projectmaven.vercel.app"),
+    "Projectmaven empowers teams and businesses to scope and estimate projects accurately with AI-powered tools. Streamline workflows, enhance collaboration, and boost productivity. Whether you are a startup or an enterprise, Projectmaven is designed to make product development faster, smarter, and more efficient with expert guidance and cutting-edge solutions.",
+  keywords:
+    "Projectmaven, AI-powered tools, product development, project estimation, workflow automation, team collaboration, productivity tools, faster development, expert guidance, startup tools, enterprise solutions",
   openGraph: {
     title: "Projectmaven | Accelerate Your Product Development",
     description:
-      "Scope and estimate your projects accurately, streamline your workflow, and speed up your product development with AI-powered tools. Build faster with expert guidance.",
-    url: siteUrl,
+      "Projectmaven empowers teams and businesses to scope and estimate projects accurately with AI-powered tools. Streamline workflows, enhance collaboration, and boost productivity. Whether you are a startup or an enterprise, Projectmaven is designed to make product development faster, smarter, and more efficient with expert guidance and cutting-edge solutions.",
+    url: siteUrl, // Absolute URL for the site
     siteName: "Projectmaven",
+    locale: "en_US",
+    type: "website",
     images: [
       {
-        url: `${siteUrl}/projectmaven.png`,
+        url: `${siteUrl}/projectmaven.png?v=1`, // Absolute URL with cache-busting parameter
         width: 1200,
         height: 630,
-        alt: "Projectmaven",
+        alt: "Projectmaven Preview",
+        type: "image/png",
       },
     ],
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Projectmaven | Accelerate Your Product Development",
     description:
-      "Scope and estimate your projects accurately, streamline your workflow, and speed up your product development with AI-powered tools. Build faster with expert guidance.",
-    images: [`${siteUrl}/projectmaven.png`],
+      "Projectmaven empowers teams and businesses to scope and estimate projects accurately with AI-powered tools. Streamline workflows, enhance collaboration, and boost productivity. Whether you are a startup or an enterprise, Projectmaven is designed to make product development faster, smarter, and more efficient with expert guidance and cutting-edge solutions.",
+    images: [`${siteUrl}/projectmaven.png?v=1`], // Absolute URL with cache-busting parameter
+  },
+  other: {
+    "og:image": `${siteUrl}/projectmaven.png?v=1`, // Absolute URL
+    "og:image:secure_url": `${siteUrl}/projectmaven.png?v=1`, // Secure URL
   },
 };
 
@@ -59,10 +67,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${roboto.variable} ${inter.variable}  antialiased font-roboto bg-white`}
       >
-        {/* Apply fonts and styles globally */}
-        <Header /> {/* Header component at the top of the page */}
-        {children} {/* The main content passed as children to the layout */}
-        <Footer /> {/* Footer component at the bottom of the page */}
+          {/* Apply fonts and styles globally */}
+          <Header /> {/* Header component at the top of the page */}
+          {children} {/* The main content passed as children to the layout */}
+          <Footer /> {/* Footer component at the bottom of the page */}
       </body>
     </html>
   );

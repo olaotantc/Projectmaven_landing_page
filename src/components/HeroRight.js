@@ -4,7 +4,7 @@ import { ZoomIn } from "./FadeZoom";
 export default function HeroRight() {
   return (
     <ZoomIn>
-      <div className="relative w-full h-full mt-32  md:p-0 sm:mt-40 md:mt-0 grid place-items-center ">
+      <div className="relative w-full h-full mt-32 z-0 md:p-0 sm:mt-40 md:mt-0 grid place-items-center ">
         <Image
           src="/hero-img.svg" // Path to the hero image
           alt="Projectmaven Hero Banner Image" // Alt text for accessibility

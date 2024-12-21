@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import AvatarRow from "./AvatarRow"; // Importing the AvatarRow component to show avatars of subscribed users
 import Input from "./Input"; // Importing a custom Input component for subscription
@@ -7,7 +8,7 @@ import AnimatedText from "./AnimatedText";
 
 export default function HeroLeft() {
   return (
-    <div className="flex items-center justify-center flex-col md:items-start">
+    <div className="flex items-center justify-center flex-col md:items-start z-30">
       {/* Centering content on mobile and displaying as block on desktop */}
       {/* Heading Section */}
       <FadeUp delay={0.3}>
@@ -52,12 +53,14 @@ export default function HeroLeft() {
 
       <FadeUp
         delay={0.9}
-        className="w-full relative flex items-center justify-center md:justify-start"
+        
       >
+        <div className="w-full  flex items-center justify-center md:justify-start">
         <AvatarRow /> {/* Displays avatars of users who subscribed */}
         <p className="text-sm md:text-base ">
           <strong>100+</strong> Already Subscribed {/* Subscription count */}
         </p>
+        </div>
       </FadeUp>
     </div>
   );

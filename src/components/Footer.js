@@ -1,13 +1,16 @@
+"use client"
 import Image from "next/image"; // Importing Next.js Image component for optimized images
 import Input from "./Input"; // Importing custom Input component for the subscription form
 import TextAccent from "./TextAccent"; // Importing custom TextAccent component for styling
 import { socialMedias } from "@/data/footerData"; // Importing social media data for links and icons
 import Link from "next/link"; // Importing Next.js Link component for navigation
+import { ModalProvider } from "@/context/ModalContext";
 
 // Footer component
 export default function Footer() {
   return (
-    <div className="bg-footer h-full mt-8 px-5 md:px-0">
+  <ModalProvider>
+      <div className="bg-footer h-full mt-8 px-5 md:px-0">
       {/* Footer container with background and margin */}
       <div className="container mx-auto py-24 md:py-auto md:p-24 text-center grid place-items-center">
         {/* Centering content with responsive padding */}
@@ -30,7 +33,7 @@ export default function Footer() {
           small={true} // Prop for smaller input size
           subText={
             // Additional text displayed below the input field
-            <span className="mt-3">
+            <span className="mt-3 text-center">
               By subscribing, you agree to our Privacy Policy and consent to
               receive <br /> updates from our company.
             </span>
@@ -57,5 +60,6 @@ export default function Footer() {
         </p>
       </div>
     </div>
+  </ModalProvider>
   );
 }
