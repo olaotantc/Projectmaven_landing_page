@@ -64,7 +64,7 @@ export default function EmailModal() {
             <div className="bg-gray-50 px-6 py-4 sm:flex sm:justify-end">
               <button
                 type="button"
-                className="inline-flex justify-center rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-dark sm:w-auto focus:outline-none focus:ring-2 focus:ring-primary-light"
+                className="inline-flex z-[999] justify-center rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-dark sm:w-auto focus:outline-none focus:ring-2 focus:ring-primary-light"
                 onClick={onClose} // Close the modal
               >
                 Got it!

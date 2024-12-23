@@ -67,6 +67,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="h-screen">
       <head>
+        <title>Projectmaven | Accelerate Your Product Development</title>
+
         <meta charset="UTF-8" />
         <meta
           name="title"
