@@ -6,23 +6,23 @@ export default function AvatarRow() {
       
       {/* First Avatar */}
       <Avatar
-        src="/projectmaven-avatar-1.avif" // Source for the first avatar
-        alt="Projectmaven Avatar Image 1" // Alt text for accessibility
-        className="left-0 z-10" // Position and z-index for the first avatar
+        src="/projectmaven-avatar-1.avif" 
+        alt="Projectmaven Avatar Image 1"
+        className="left-0 z-10" // Positioned at the left with z-index 10
       />
 
       {/* Second Avatar */}
       <Avatar
-        src="/projectmaven-avatar-2.avif" // Source for the second avatar
-        alt="Projectmaven Avatar Image 2" // Alt text for accessibility
-        className="left-6 z-20" // Position and z-index for the second avatar
+        src="/projectmaven-avatar-2.avif"
+        alt="Projectmaven Avatar Image 2"
+        className="left-6 z-20" // Positioned 6 units to the left with z-index 20
       />
 
       {/* Third Avatar */}
       <Avatar
-        src="/projectmaven-avatar-3.avif" // Source for the third avatar
-        alt="Projectmaven Avatar Image 3" // Alt text for accessibility
-        className="left-12 z-30" // Position and z-index for the third avatar
+        src="/projectmaven-avatar-3.avif"
+        alt="Projectmaven Avatar Image 3"
+        className="left-12 z-30" // Positioned 12 units to the left with z-index 30
       />
     </div>
   );

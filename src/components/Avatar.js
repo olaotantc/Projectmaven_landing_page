@@ -8,10 +8,10 @@ const Avatar = ({ src, alt, className }) => {
         <Image
           src={src} // Avatar image source
           alt={alt} // Alt text for accessibility
-          layout="intrinsic" // Ensures the image keeps its intrinsic aspect ratio
-          width={36} // Width of the avatar image
-          height={36} // Height of the avatar image
-          className="object-cover w-full h-full" // Ensures the image covers the entire container while maintaining aspect ratio
+          layout="intrinsic" // Maintains intrinsic aspect ratio
+          width={36} // Avatar image width
+          height={36} // Avatar image height
+          className="object-cover w-full h-full" // Ensures the image fills the container
         />
       </div>
     </div>

@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --background: #f9f7ff;
-  --foreground: #171717;
-  --primary: #7547f8;
-  --primary-light: #9a7af3;
-  --primary-dark: #622df4;
+  --background: #f9f7ff; /* Background color */
+  --foreground: #171717; /* Text and primary content color */
+  --primary: #7547f8; /* Primary theme color */
+  --primary-light: #9a7af3; /* Lighter shade of primary */
+  --primary-dark: #622df4; /* Darker shade of primary */
 }
 
 .social-icons:hover {
-  fill: var(--primary);
+  fill: var(--primary); /* Change icon color on hover */
 }
 
 @keyframes scaleIn {
@@ -26,7 +26,7 @@
 }
 
 .animate-scaleIn {
-  animation: scaleIn 0.3s ease-out forwards;
+  animation: scaleIn 0.3s ease-out forwards; /* Scale-in animation */
 }
 
 @keyframes fadeIn {
@@ -39,6 +39,5 @@
 }
 
 .animate-fadeIn {
-  animation: fadeIn 0.3s ease-out forwards;
+  animation: fadeIn 0.3s ease-out forwards; /* Fade-in animation */
 }
-

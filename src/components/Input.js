@@ -6,9 +6,10 @@ import { useModalContext } from "@/context/ModalContext";
 export default function Input({ btnText, subText, small }) {
   const modalContext = useModalContext();
 
+  // Check if the modal context is available
   if (!modalContext) {
     console.log("Modal context is not available.");
-    return null; // Or display an error message
+    return null; // Return null if the context is not available
   }
 
   const { setShowModal, triggerConfetti } = modalContext;
@@ -21,15 +22,14 @@ export default function Input({ btnText, subText, small }) {
 
       // Simulating the submission delay
       await new Promise((resolve) => setTimeout(resolve, 2000));
-      console.log(modalContext);
 
       setIsLoading(false);
-      triggerConfetti(true); // Trigger confetti animation
-      setShowModal(true);
-      reset();
+      triggerConfetti(true); // Trigger confetti animation on successful submission
+      setShowModal(true); // Show modal after submission
+      reset(); // Reset the form
     } catch (error) {
       setIsLoading(false);
-      console.error("Subscription error:", error);
+      console.error("Subscription error:", error); // Handle submission error
     }
   };
 
@@ -37,6 +37,7 @@ export default function Input({ btnText, subText, small }) {
     <div className={!small ? "w-full" : ""}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="relative w-full md:max-w-[520px] md:text-[17px] ">
+          {/* Email input field */}
           <input
             type="email"
             className={`placeholder:text-left text-center md:text-left md:placeholder:text-left pl-6 pr-6 md:pr-16 ${
@@ -44,13 +45,14 @@ export default function Input({ btnText, subText, small }) {
             } rounded-full border border-gray-300  md:text-sm lg:text-base focus:outline-none focus:ring-1 focus:ring-primary-light 
             focus:ring-opacity-10 w-full`}
             placeholder="Enter your email address"
-            disabled={isLoading}
+            disabled={isLoading} // Disable input when loading
             required
           />
 
+          {/* Submit button */}
           <button
             type="submit"
-            disabled={isLoading}
+            disabled={isLoading} // Disable button when loading
             className={`relative w-full md:text-sm lg:text-base md:w-auto mt-3 md:mt-1 
             md:absolute inset-y-0 right-1 px-7 py-3 md:py-2 my-1 grid place-content-center 
             rounded-full bg-primary text-white hover:bg-primary-dark focus:outline-none 
@@ -59,6 +61,7 @@ export default function Input({ btnText, subText, small }) {
           >
             {isLoading ? (
               <div className="flex items-center gap-2">
+                {/* Loading spinner */}
                 <svg
                   className="animate-spin h-4 w-4 text-white"
                   xmlns="http://www.w3.org/2000/svg"
@@ -82,16 +85,15 @@ export default function Input({ btnText, subText, small }) {
                 <span>Subscribing...</span>
               </div>
             ) : (
-              btnText
+              btnText // Display button text when not loading
             )}
           </button>
         </div>
       </form>
 
+      {/* Subscription terms text */}
       <p
-        className={`text-content-secondary text-xs my-2 text-center md:text-${
-          small ? "center" : "left"
-        }`}
+        className={`text-content-secondary text-xs my-2 text-center md:text-${small ? "center" : "left"}`}
       >
         {subText}
       </p>

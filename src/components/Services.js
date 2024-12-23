@@ -5,7 +5,7 @@ import { FadeUp } from "./FadeZoom";
 
 export default function Services() {
   return (
-    <div className="w-full mt-5  container mx-auto text-center py-28">
+    <div className="w-full mt-5 container mx-auto text-center py-28">
       {/* Section title with accent text */}
       <FadeUp delay={.3}>
         <TextHeading
