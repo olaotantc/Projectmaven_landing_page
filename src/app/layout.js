@@ -55,7 +55,9 @@ export const metadata = {
   other: {
     "og:image": `${siteUrl}/projectmaven.png?v=1`,
     "og:image:secure_url": `${siteUrl}/projectmaven.png?v=1`,
+    "og:image:alt": "Projectmaven Preview", // Added alt text for og:image
   },
+  icon: "/projectmaven-tab-icon.png", // Added tab icon
 };
 
 // RootLayout component for wrapping the page structure
