@@ -57,8 +57,11 @@ export const metadata = {
     "og:image:secure_url": `${siteUrl}/projectmaven.png?v=1`,
     "og:image:alt": "Projectmaven Preview", // Added alt text for og:image
   },
-  icon: "/projectmaven-tab-icon.png", // Added tab icon
+  icon: `${siteUrl}/projectmaven-tab-icon.png?v=1`, // Added tab icon
+  // Favicon added for compatibility with different browsers
+  favicon: `${siteUrl}/favicon.ico?v=1`, // Adding favicon link
 };
+
 
 // RootLayout component for wrapping the page structure
 export default function RootLayout({ children }) {
