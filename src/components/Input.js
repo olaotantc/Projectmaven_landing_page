@@ -2,6 +2,9 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useModalContext } from "@/context/ModalContext";
+import { LoopsClient } from "loops";
+
+const loops = new LoopsClient(process.env.LOOPS_API_KEY);
 
 export default function Input({ btnText, subText, small }) {
   const modalContext = useModalContext();
@@ -14,14 +17,15 @@ export default function Input({ btnText, subText, small }) {
 
   const { setShowModal, triggerConfetti } = modalContext;
   const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState("");
   const { handleSubmit, reset } = useForm();
 
   const onSubmit = async () => {
     try {
+      if(!email) return;
       setIsLoading(true);
 
-      // Simulating the submission delay
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      await loops.createContact(email);
 
       setIsLoading(false);
       triggerConfetti(true); // Trigger confetti animation on successful submission
@@ -46,6 +50,8 @@ export default function Input({ btnText, subText, small }) {
             focus:ring-opacity-10 w-full`}
             placeholder="Enter your email address"
             disabled={isLoading} // Disable input when loading
+            onChange={(e)=>setEmail(e.target.value)}
+            value={email}
             required
           />
 
