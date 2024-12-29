@@ -25,7 +25,7 @@ export default function HeroLeft() {
 
       {/* Animated description text */}
       <AnimatedText
-        text="Scope and estimate your projects accurately, streamline your workflow, and speed up your product development - all in one place."
+        text="Scope your projects accurately, streamline your workflow, and speed up your product development - all in one place."
         className="text-content-secondary md:text-base lg:text-lg"
         TextAccent="Powered by AI"
       />
