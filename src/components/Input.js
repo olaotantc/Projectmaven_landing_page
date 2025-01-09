@@ -2,9 +2,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useModalContext } from "@/context/ModalContext";
-import { LoopsClient } from "loops";
-
-const loops = new LoopsClient(process.env.LOOPS_API_KEY);
 
 export default function Input({ btnText, subText, small }) {
   const modalContext = useModalContext();
@@ -24,8 +21,7 @@ export default function Input({ btnText, subText, small }) {
     try {
       if(!email) return;
       setIsLoading(true);
-
-      await loops.createContact(email);
+      fetch("/api/loops", {method: "POST", body: JSON.stringify({email})} );
 
       setIsLoading(false);
       triggerConfetti(true); // Trigger confetti animation on successful submission
