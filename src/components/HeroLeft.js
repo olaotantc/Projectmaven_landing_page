@@ -14,7 +14,7 @@ export default function HeroLeft() {
       {/* Heading Section */}
       <FadeUp delay={0.3}>
         <TextHeading
-          text={"Accelerate Your Product Development."} // Main heading text
+          text={"Go from Idea to Dev‑Ready Blueprint in Minutes."} // Main heading text
           accentText={"Build Faster."} // Accent text for emphasis
           addStyles={
             "text-[42px] md:text-[35px] lg:text-[48px] font-extrabold text-center md:text-left "
